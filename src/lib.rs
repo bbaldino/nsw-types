@@ -1,13 +1,13 @@
-//! # uX - non-standard-width integers types
+//! # nsw-types - non-standard-width integers types
 //!
-//! When non-standard-width integers is required in an applications, the norm is to use a larger container and make sure the value is within range after manipulation. uX aims to take care of this once and for all by:
+//! When non-standard-width integers is required in an applications, the norm is to use a larger container and make sure the value is within range after manipulation. nsw-types aims to take care of this once and for all by:
 //!
 //! - Providing `u1`-`u127` and `i1`-`i127` types that should behave as similar as possible to the built in rust types
 //!     - The methods of the defined types are the same as for the built in types (far from all is implemented at this point but fill out an issue or create a PR if something essential for you is missing)
 //!     - Overflow will panic in debug and wrap in release.
 //! - All possible infallible conversions is possible by using `From` and all fallible conversion by using `TryFrom`.
 //!
-//! The uX types take up as much space as the smallest integer type that can contain them;
+//! The types take up as much space as the smallest integer type that can contain them;
 //! the compiler can not yet be made aware of further optimization potential,
 //! and thus does not use it:
 //! an `Option<u7>` still takes up two bytes.
@@ -104,7 +104,7 @@ macro_rules! implement_common {
             /// Basic usage:
             ///
             /// ```
-            /// use ux::*;
+            /// use nsw_types::*;
             ///
             /// assert_eq!(u31::new(64), u31::from(64u8));
             ///
@@ -126,7 +126,7 @@ macro_rules! implement_common {
             /// Basic usage:
             ///
             /// ```
-            /// use ux::*;
+            /// use nsw_types::*;
             ///
             /// assert_eq!(i5::MIN.wrapping_sub(i5::new(1)), i5::MAX);
             ///
@@ -145,7 +145,7 @@ macro_rules! implement_common {
             /// Basic usage:
             ///
             /// ```
-            /// use ux::*;
+            /// use nsw_types::*;
             ///
             /// assert_eq!(i5::MAX.wrapping_add(i5::new(1)), i5::MIN);
             ///

@@ -8,13 +8,13 @@ who is not also the author of the PR.
 
 ## Development goals
 
-* Basic properties of the types in uX are advertised already in the README:
+* Basic properties of the types in `nsw-types` are advertised already in the README:
   Behave as close as possible to the corresponding builtin type,
   be stored like them,
   and give the compiler as much information as practical to work with them
   (eg. advertising niches).
 * Builtin types often have traits implemented for them in third party crates.
-  We encourage these third parties to optionally depend on uX
+  We encourage these third parties to optionally depend on `nsw-types`
   and implement the traits for these types as well;
   when that is impossible for some reason,
   we may add an optional dependency and implement the traits here instead.

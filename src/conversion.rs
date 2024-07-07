@@ -1809,7 +1809,7 @@ mod tests {
         assert!(u2::try_from(4usize).is_err());
         assert_eq!(u17(1).try_into(), Ok(1usize));
 
-        // Make sure that uX types behave the same as standard types with regards to usize
+        // Make sure that nsw-types types behave the same as standard types with regards to usize
         // conversion.
         assert_eq!(
             usize::try_from(0x1_FFFF_FFFFu64).is_err(),
