@@ -893,6 +893,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::op_ref)]
     fn test_bitor() {
         assert_eq!(u9(1) | u9(8), u9(9));
         assert_eq!(&u9(1) | u9(8), u9(9));
@@ -913,6 +914,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::op_ref)]
     fn test_bitxor() {
         assert_eq!(u7(0x7F) ^ u7(42), u7(85));
         assert_eq!(&u7(0) ^ u7(42), u7(42));
@@ -934,6 +936,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::op_ref)]
     fn test_bitand() {
         assert_eq!(i9(-7) & i9(-9), i9::from(-7i8 & -9i8));
         assert_eq!(&i9(-7) & i9(-9), i9::from(&-7i8 & -9i8));
@@ -968,6 +971,7 @@ mod tests {
     }
 
     #[test]
+    #[allow(clippy::single_match)]
     fn test_match() {
         const SEVEN: u7 = u7::new(7);
         match u7(7) {
@@ -980,7 +984,7 @@ mod tests {
         }
     }
 
-    #[cfg(test)]
+    #[test]
     fn test_mul() {
         assert_eq!(u1(1) * u1(1), u1(1));
         assert_eq!(u7(63) * u7(2), u7(126));
