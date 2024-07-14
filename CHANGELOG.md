@@ -5,6 +5,14 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [0.1.8](https://github.com/bbaldino/nsw-types/compare/v0.1.7...v0.1.8) - 2024-07-14
+
+### Other
+- fix release-plz monitored branch
+- Bump actions/checkout from 2 to 4 ([#1](https://github.com/bbaldino/nsw-types/pull/1))
+- remove old publish workflow
+- add release-plz
 ### Added
 ### Changed
 ### Deprecated
