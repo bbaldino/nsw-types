@@ -935,6 +935,37 @@ implement_from!(
     ]
 );
 
+// Implement from unsigned to signed
+implement_try_into!([u1, u2, u3, u4, u5, u6, u7], i8);
+implement_try_into!([u9, u10, u11, u12, u13, u14, u15], i8);
+implement_try_into!([u17, u18, u19, u20, u21, u22, u23], i8);
+implement_try_into!([u24, u25, u26, u27, u28, u29, u30], i8);
+implement_try_into!([u31, u33, u34, u35, u36, u37, u38], i8);
+implement_try_into!([u39, u40, u41, u42, u43, u44, u45], i8);
+implement_try_into!([u46, u47, u48, u49, u50, u51, u52], i8);
+implement_try_into!([u53, u54, u55, u56, u57, u58, u59], i8);
+implement_try_into!([u60, u61], i8);
+
+implement_into!([u1, u2, u3, u4, u5, u6, u7], i16);
+implement_try_into!([u9, u10, u11, u12, u13, u14, u15], i16);
+implement_try_into!([u17, u18, u19, u20, u21, u22, u23], i16);
+implement_try_into!([u24, u25, u26, u27, u28, u29, u30], i16);
+implement_try_into!([u31, u33, u34, u35, u36, u37, u38], i16);
+implement_try_into!([u39, u40, u41, u42, u43, u44, u45], i16);
+implement_try_into!([u46, u47, u48, u49, u50, u51, u52], i16);
+implement_try_into!([u53, u54, u55, u56, u57, u58, u59], i16);
+implement_try_into!([u60, u61], i16);
+
+implement_into!([u1, u2, u3, u4, u5, u6, u7], i32);
+implement_into!([u9, u10, u11, u12, u13, u14, u15], i32);
+implement_try_into!([u17, u18, u19, u20, u21, u22, u23], i32);
+implement_try_into!([u24, u25, u26, u27, u28, u29, u30], i32);
+implement_try_into!([u31, u33, u34, u35, u36, u37, u38], i32);
+implement_try_into!([u39, u40, u41, u42, u43, u44, u45], i32);
+implement_try_into!([u46, u47, u48, u49, u50, u51, u52], i32);
+implement_try_into!([u53, u54, u55, u56, u57, u58, u59], i32);
+implement_try_into!([u60, u61], i32);
+
 // Implement From for all signed integer
 
 implement_try_from!([i2, i3, i4, i5, i6, i7], i8);
