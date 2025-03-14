@@ -1803,7 +1803,7 @@ mod tests {
         assert_eq!(u16::from(u9(12)), 12u16);
         assert_eq!(u32::from(u9(12)), 12u32);
 
-        assert_eq!(u9(127), 127u8.into());
+        assert_eq!(u9(127), <u8 as Into<u9>>::into(127u8));
 
         assert_eq!(u7::from(u6(65)), u7(65));
     }

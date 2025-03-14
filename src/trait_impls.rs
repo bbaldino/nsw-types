@@ -74,7 +74,7 @@ mod tests {
 
     #[test]
     fn test_ordering() {
-        assert!(u1::new(10) > 0u8);
+        assert!(u1::new(1) > 0u8);
         assert!(u10::new(10) > 0u16);
         assert!(u20::new(10) > 0u32);
     }
