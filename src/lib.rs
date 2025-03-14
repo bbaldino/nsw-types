@@ -21,6 +21,7 @@ mod lib {
 mod conversion;
 #[cfg(feature = "num-traits")]
 pub mod num_traits_impls;
+pub mod trait_impls;
 #[cfg(feature = "num-traits")]
 pub use num_traits;
 
