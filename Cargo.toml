@@ -1,6 +1,6 @@
 [package]
 name = "nsw-types"
-version = "0.1.11"
+version = "0.1.12"
 authors = ["Brian Baldino <bbaldino@gmail.com> "]
 edition = "2021"
 

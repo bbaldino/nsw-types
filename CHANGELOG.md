@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.12](https://github.com/bbaldino/nsw-types/compare/v0.1.11...v0.1.12) - 2025-04-24
+
+### Fixed
+
+- i1 can't implement One or ConstOne traits, its max value is 0
+
 ## [0.1.11](https://github.com/bbaldino/nsw-types/compare/v0.1.10...v0.1.11) - 2025-03-14
 
 ### Fixed
