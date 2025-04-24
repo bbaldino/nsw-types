@@ -32,6 +32,21 @@ macro_rules! impl_num_traits {
     () => {}
 }
 
+// 'i1' has a max value of 0, so _can't_ have `One` or `ConstOne` implemented for it
+impl Zero for i1 {
+    fn zero() -> Self {
+        i1::new(0)
+    }
+
+    fn is_zero(&self) -> bool {
+        self.0 == 0
+    }
+}
+
+impl ConstZero for i1 {
+    const ZERO: Self = i1::new(0);
+}
+
 impl_num_traits!(u1, u2, u3, u4, u5, u6, u7, u9, u10, u11, u12, u13, u14, u15, u17, u18, u19);
 impl_num_traits!(u20, u21, u22, u23, u24, u25, u26, u27, u28, u29, u30, u31, u33, u34, u35, u36);
 impl_num_traits!(u37, u38, u39, u40, u41, u42, u43, u44, u45, u46, u47, u48, u49, u50, u51, u52);
@@ -41,7 +56,7 @@ impl_num_traits!(u86, u87, u88, u89, u90, u91, u92, u93, u94, u95, u96, u97, u98
 impl_num_traits!(u102, u103, u104, u105, u106, u107, u108, u109, u110, u111, u112, u113, u114);
 impl_num_traits!(u115, u116, u117, u118, u119, u120, u121, u122, u123, u124, u125, u126, u127);
 
-impl_num_traits!(i1, i2, i3, i4, i5, i6, i7, i9, i10, i11, i12, i13, i14, i15, i17, i18, i19);
+impl_num_traits!(i2, i3, i4, i5, i6, i7, i9, i10, i11, i12, i13, i14, i15, i17, i18, i19);
 impl_num_traits!(i20, i21, i22, i23, i24, i25, i26, i27, i28, i29, i30, i31, i33, i34, i35, i36);
 impl_num_traits!(i37, i38, i39, i40, i41, i42, i43, i44, i45, i46, i47, i48, i49, i50, i51, i52);
 impl_num_traits!(i53, i54, i55, i56, i57, i58, i59, i60, i61, i62, i63, i65, i66, i67, i68, i69);
