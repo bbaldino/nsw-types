@@ -6,6 +6,12 @@ and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.
 
 ## [Unreleased]
 
+## [0.1.13](https://github.com/bbaldino/nsw-types/compare/v0.1.12...v0.1.13) - 2025-04-29
+
+### Added
+
+- experimental feature to allow creation of u1-ux7 from a BitSlice
+
 ## [0.1.12](https://github.com/bbaldino/nsw-types/compare/v0.1.11...v0.1.12) - 2025-04-24
 
 ### Fixed
